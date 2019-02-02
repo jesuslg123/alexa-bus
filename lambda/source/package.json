@@ -1,0 +1,16 @@
+{
+  "name": "alexa-bus",
+  "version": "1.1.0",
+  "description": "Alexa bus backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "color-logs": "^0.6.1",
+    "ask-sdk": "^2.0.0"
+  }
+}

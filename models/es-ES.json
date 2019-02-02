@@ -1,0 +1,338 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "transporte bus",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "StopNumberIntent",
+                    "slots": [
+                        {
+                            "name": "stopIdentifier",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "parada {stopIdentifier}",
+                        "número {stopIdentifier}",
+                        "tiempos de espera de la parada {stopIdentifier}",
+                        "tiempos para la parada {stopIdentifier}",
+                        "tiempos de la parada {stopIdentifier}",
+                        "tiempos de {stopIdentifier}",
+                        "tiempos para {stopIdentifier}",
+                        "tiempos de espera para la parada {stopIdentifier}",
+                        "tiempos de espera para {stopIdentifier}",
+                        "dame información {stopIdentifier}",
+                        "dame información parada {stopIdentifier}",
+                        "dame información de la parada {stopIdentifier}",
+                        "información parada {stopIdentifier}",
+                        "información de la parada {stopIdentifier}",
+                        "la parada {stopIdentifier} ",
+                        "de la parada {stopIdentifier} "
+                    ]
+                },
+                {
+                    "name": "StopByNameIntent",
+                    "slots": [
+                        {
+                            "name": "stopName",
+                            "type": "FavoriteType"
+                        }
+                    ],
+                    "samples": [
+                        "favorita {stopName}",
+                        "favorito {stopName}",
+                        "cargar parada favorita {stopName}",
+                        "cargar la parada favorita {stopName}",
+                        "carga parada favorita {stopName} ",
+                        "carga la parada favorita {stopName}",
+                        "la parada favorita {stopName} ",
+                        "parada favorita {stopName}"
+                    ]
+                },
+                {
+                    "name": "AddFavoriteIntent",
+                    "slots": [
+                        {
+                            "name": "stopNumber",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "stopName",
+                            "type": "FavoriteType"
+                        }
+                    ],
+                    "samples": [
+                        "almacena la parada {stopNumber} nombre {stopName}",
+                        "almacenar la parada {stopNumber} nombre {stopName}",
+                        "almacenar parada {stopNumber} nombre {stopName}",
+                        "almacenar {stopNumber} nombre {stopName}",
+                        "almacenar la parada {stopNumber} con nombre {stopName}",
+                        "almacenar parada {stopNumber} con nombre {stopName}",
+                        "almacenar {stopNumber} con nombre {stopName}",
+                        "guardar la parada {stopNumber} nombre {stopName}",
+                        "guardar parada {stopNumber} nombre {stopName}",
+                        "guarda la parada {stopNumber} nombre {stopName}",
+                        "guardar {stopNumber} nombre {stopName}",
+                        "guarda {stopNumber} nombre {stopName}",
+                        "guardar la parada {stopNumber} con nombre {stopName}",
+                        "guardar parada {stopNumber} con nombre {stopName}",
+                        "guarda la parada {stopNumber} con nombre {stopName}",
+                        "guardar {stopNumber} con nombre {stopName}",
+                        "guarda {stopNumber} con nombre {stopName}"
+                    ]
+                },
+                {
+                    "name": "DeleteFavoriteIntent",
+                    "slots": [
+                        {
+                            "name": "stopName",
+                            "type": "FavoriteType"
+                        }
+                    ],
+                    "samples": [
+                        "borra {stopName}",
+                        "borrar {stopName}",
+                        "eliminar {stopName}",
+                        "elimina favorito {stopName}",
+                        "borra favorito {stopName}",
+                        "quitar el favorito {stopName}",
+                        "borrar el favorito {stopName}",
+                        "eliminar el favorito {stopName}",
+                        "quita el favorito {stopName}",
+                        "elimina el favorito {stopName}",
+                        "borra el favorito {stopName}"
+                    ]
+                },
+                {
+                    "name": "ListFavoriteIntent",
+                    "slots": [],
+                    "samples": [
+                        "mi lista de favoritos",
+                        "mis guardadas",
+                        "mis guardados",
+                        "mis favoritos guardados",
+                        "mis paradas guardadas",
+                        "lista favoritos",
+                        "mis paradas favoritas",
+                        "mis paradas",
+                        "mis favoritos",
+                        "dime mis favoritos"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                }
+            ],
+            "types": [
+                {
+                    "name": "FavoriteType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "gimnasio",
+                                "synonyms": [
+                                    "gym"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "colegio",
+                                "synonyms": [
+                                    "insti",
+                                    "instituto",
+                                    "cole"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "universidad",
+                                "synonyms": [
+                                    "uni"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "oficina",
+                                "synonyms": [
+                                    "empleo",
+                                    "trabajo"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "casa",
+                                "synonyms": [
+                                    "hogar"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "StopNumberIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "stopIdentifier",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.898712516171.1046659014884"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "AddFavoriteIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "stopNumber",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.403795002530.798787692339"
+                            }
+                        },
+                        {
+                            "name": "stopName",
+                            "type": "FavoriteType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.403795002530.73822410568"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "StopByNameIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "stopName",
+                            "type": "FavoriteType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.665965756525.876185046146"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "DeleteFavoriteIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "stopName",
+                            "type": "FavoriteType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.611439506362.995366832382"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.898712516171.1046659014884",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "¿Qué número quieres buscar?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "¿Cuál es el número de la parada que quieres consultar?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.81114033424.302772336204",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "¿Cómo quieres que se llame el favorito?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.81114033424.852444748904",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "¿Cuál es el número de la parada?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.403795002530.798787692339",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "¿Qué número de parada quieres guardar?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.403795002530.73822410568",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "¿Qué nombre quieres usar?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.665965756525.876185046146",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "¿Qué favorito quieres cargar?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.611439506362.995366832382",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "¿Qué favorito quieres borrar?"
+                    }
+                ]
+            }
+        ]
+    }
+}
