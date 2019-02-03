@@ -45,15 +45,13 @@ For **GRANA** mode:
 * **GRANADAAPI** = GranadaBus Api url (This is a private API)
 
 
-## Live skills
-
-* [![GranadaBus](https://images-na.ssl-images-amazon.com/images/I/51MGSyCp1QL._SL210_QL95_BG0,0,0,0_FMpng_.png)](https://www.amazon.es/Apps-Entertainment-Granada-Bus/dp/B07KX3GKKK)
-* [![BarnaBus](https://images-na.ssl-images-amazon.com/images/I/51RSYDU3wjL._SL210_QL95_BG0,0,0,0_FMpng_.png)](https://www.amazon.es/Apps-Entertainment-BarnaBus-TMB/dp/B07LCGKNBC)
-
-
 ## Contributing
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Live skills
+
+[![GranadaBus](https://images-na.ssl-images-amazon.com/images/I/51MGSyCp1QL._SL210_QL95_BG0,0,0,0_FMpng_.png)](https://www.amazon.es/Apps-Entertainment-Granada-Bus/dp/B07KX3GKKK) [![BarnaBus](https://images-na.ssl-images-amazon.com/images/I/51RSYDU3wjL._SL210_QL95_BG0,0,0,0_FMpng_.png)](https://www.amazon.es/Apps-Entertainment-BarnaBus-TMB/dp/B07LCGKNBC)
 
 ## Authors
 
